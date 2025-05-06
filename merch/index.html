@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merch // Spaceman Zack</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+  <header class="filled-header">
+    <nav id="nav-menu">
+      <menu>
+        <li><a href="/" class="navlink">home</a></li>
+        <li><a href="/merch/" class="navlink">merch</a></li>
+        <li><a href="/music" class="navlink">music</a></li>
+        <li><a href="/videos" class="navlink">videos</a></li>
+        <li><a href="/the-hollow-place" class="navlink">the hollow place</a></li>
+      </menu>
+      <button type="button" id="nav-menu-closer" class="navlink">x</button>
+    </nav>
+    <div id="nav-menu-opener" ><button class="navlink" type="button">menu</button></div>
+    <div id="cart-opener"><button class="navlink" type="button">cart</button></div>
+    <div id="cart-container">
+      <div>
+        <button class="navlink" id="cart-closer" type="button">x</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="header-spacer merch-page content-container">
+    <section class="merch-filters">
+      <button id="filter-toggle" class="navlink">filters</button>
+      <div id="filter-panel" class="filter-panel">
+        <ul class="filter-list">
+
+          <li class="filter-row" data-category="all">
+            <div class="filter-indicator-container">
+              <span class="filter-indicator">x</span>
+            </div>
+            <span class="filter-label">All</span>
+          </li>
+          
+        
+          <li class="filter-row category" data-category="apparel">
+            <div class="filter-indicator-container">
+              <span class="filter-indicator" data-category="apparel">x</span>
+            </div>
+            <span class="filter-label">Apparel</span>
+            <button class="dropdown-toggle" data-target="apparel-sub">
+              <svg fill="#fff" class="submenu-indicator" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21,21H3L12,3Z"></path>
+              </svg>
+            </button>
+          </li>
+          <ul class="subfilters" id="apparel-sub">
+            <li class="filter-row sub" data-category="tshirt">
+              <div class="filter-indicator-container">
+                <span class="filter-indicator">x</span>
+              </div>
+              <span class="filter-label">T-Shirts</span>
+            </li>
+            <li class="filter-row sub" data-category="longsleeve">
+              <div class="filter-indicator-container">
+                <span class="filter-indicator">x</span>
+              </div>
+              <span class="filter-label">Long-Sleeved Shirts</span>
+            </li>
+            <li class="filter-row sub" data-category="sweatshirt">
+              <div class="filter-indicator-container">
+                <span class="filter-indicator">x</span>
+              </div>
+              <span class="filter-label">Sweatshirts</span>
+            </li>
+          </ul>
+        
+          <li class="filter-row category" data-category="accessories">
+            <div class="filter-indicator-container">
+              <span class="filter-indicator" data-category="accessories">x</span>
+            </div>
+            <span class="filter-label">Accessories</span>
+            <button class="dropdown-toggle" data-target="accessories-sub">
+              <svg fill="#fff" class="submenu-indicator" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21,21H3L12,3Z"></path>
+              </svg>
+            </button>
+          </li>
+          <ul class="subfilters" id="accessories-sub">
+            <li class="filter-row sub" data-category="hats">
+              <div class="filter-indicator-container">
+                <span class="filter-indicator">x</span>
+              </div>
+              <span class="filter-label">Hats</span>
+            </li>
+            <li class="filter-row sub" data-category="phonecase">
+              <div class="filter-indicator-container">
+                <span class="filter-indicator">x</span>
+              </div>
+              <span class="filter-label">Phone Cases</span>
+            </li>
+            <li class="filter-row sub" data-category="bags">
+              <div class="filter-indicator-container">
+                <span class="filter-indicator">x</span>
+              </div>
+              <span class="filter-label">Bags</span>
+            </li>
+          </ul>
+        
+          <li class="filter-row category" data-category="music">
+            <div class="filter-indicator-container">
+              <span class="filter-indicator" data-category="music">x</span>
+            </div>
+            <span class="filter-label">Music</span>
+            <button class="dropdown-toggle" data-target="music-sub">
+              <svg fill="#fff" class="submenu-indicator" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21,21H3L12,3Z"></path>
+              </svg>
+            </button>
+          </li>
+          <ul class="subfilters" id="music-sub">
+            <li class="filter-row sub" data-category="vinyl">
+              <div class="filter-indicator-container">
+                <span class="filter-indicator">x</span>
+              </div>
+              <span class="filter-label">Vinyl</span>
+            </li>
+            <li class="filter-row sub" data-category="cd">
+              <div class="filter-indicator-container">
+                <span class="filter-indicator">x</span>
+              </div>
+              <span class="filter-label">CDs</span>
+            </li>
+          </ul>
+        
+        </ul>
+        
+      </div>
+    </section>
+
+    <section class="merch">
+      <div>
+        <ul class="merch-grid" id="merch-list">
+
+          <!-- APPAREL -->
+          <li data-category="tshirt apparel">
+            <a href="/merch/product/?name=scumbag-t-shirt">
+              <div class="merch-image-container">
+                <img src="/images/merch/merch_scumbag.png" alt="Scumbag T-Shirt" />
+              </div>
+              <div class="merch-details-container">
+                <h3>Scumbag T-Shirt</h3>
+                <p>$19.99</p>
+              </div>
+            </a>
+          </li>
+        
+          <li data-category="longsleeve apparel">
+            <a href="#">
+              <div class="merch-image-container">
+                <img src="/images/merch/merch_hangover.png" alt="Hangover Long Sleeve" />
+              </div>
+              <div class="merch-details-container">
+                <h3>Hangover Long Sleeve</h3>
+                <p>$24.99</p>
+              </div>
+            </a>
+          </li>
+        
+          <li data-category="sweatshirt apparel">
+            <a href="#">
+              <div class="merch-image-container">
+                <img src="/images/merch/merch_hangover.png" alt="Cozy Sweatshirt" />
+              </div>
+              <div class="merch-details-container">
+                <h3>Cozy Sweatshirt</h3>
+                <p>$34.99</p>
+              </div>
+            </a>
+          </li>
+        
+          <!-- ACCESSORIES -->
+          <li data-category="hats accessories">
+            <a href="#">
+              <div class="merch-image-container">
+                <img src="/images/merch/merch_scumbag.png" alt="Logo Hat" />
+              </div>
+              <div class="merch-details-container">
+                <h3>Logo Hat</h3>
+                <p>$14.99</p>
+              </div>
+            </a>
+          </li>
+        
+          <li data-category="phonecase accessories">
+            <a href="#">
+              <div class="merch-image-container">
+                <img src="/images/merch/merch_hangover.png" alt="Phone Case" />
+              </div>
+              <div class="merch-details-container">
+                <h3>Phone Case</h3>
+                <p>$12.99</p>
+              </div>
+            </a>
+          </li>
+        
+          <li data-category="bags accessories">
+            <a href="#">
+              <div class="merch-image-container">
+                <img src="/images/merch/merch_scumbag.png" alt="Tote Bag" />
+              </div>
+              <div class="merch-details-container">
+                <h3>Tote Bag</h3>
+                <p>$16.99</p>
+              </div>
+            </a>
+          </li>
+        
+          <!-- MUSIC -->
+          <li data-category="vinyl music">
+            <a href="#">
+              <div class="merch-image-container">
+                <img src="/images/merch/merch_hangover.png" alt="Limited Vinyl" />
+              </div>
+              <div class="merch-details-container">
+                <h3>Limited Vinyl</h3>
+                <p>$29.99</p>
+              </div>
+            </a>
+          </li>
+        
+          <li data-category="cd music">
+            <a href="#">
+              <div class="merch-image-container">
+                <img src="/images/merch/merch_scumbag.png" alt="CD Album" />
+              </div>
+              <div class="merch-details-container">
+                <h3>CD Album</h3>
+                <p>$9.99</p>
+              </div>
+            </a>
+          </li>
+        
+        </ul>
+        
+      </div>
+    </section>
+    
+    
+
+
+  </main>
+
+  <footer>
+    <div class="footer-container content-container">
+      <menu class="primary-links">
+        <li><a href="/">home</a></li>
+        <li><a href="/merch">merch</a></li>
+        <li><a href="/music">music</a></li>
+        <li><a href="/videos">videos</a></li>
+      </menu>
+      <menu class="secondary-links">
+        <li><a href="/the-hollow-place">the hollow place</a></li>
+        <li><a href="/contact">business inquiries</a></li>
+        <li><a href="/policies">policies</a></li>
+      </menu>
+      <ul class="site-info">
+        <li>Spaceman Zack © 2025</li>
+        <li>photography by <a href="https://www.instagram.com/taubrxy" target="_blank">T.Aubrey</a></li>
+        <li>site by <a href="#" target="_blank">Daniel</a></li>
+      </ul>
+      <form id="email-list">
+        <label for="emailInput">join the hollow place</label>
+        <div class="form-input-container">
+          <input type="email" id="emailInput" placeholder="email">
+        <button type="button" id="emailJoin">join</button>
+      </div>
+      </form>
+      <menu class="socials-links">
+        <li><a href="https://open.spotify.com/artist/53dPePMlci6GqJXISlntSK" target="_blank"><i class="fa-brands fa-spotify"></i></a></li>
+        <li><a href="https://music.apple.com/us/artist/spaceman-zack/1327103891" target="_blank"><i class="fa-brands fa-itunes-note"></i></a></li>
+        <li><a href="https://music.amazon.com/artists/B07JBC4D4H/spaceman-zack" target="_blank"><i class="fa-brands fa-amazon"></i></a></li>
+        <li><a href="https://www.youtube.com/@TheSpaceManZack" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+        <li><a href="https://www.instagram.com/spacemanzackisdead" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://www.tiktok.com/@spaceman_zack" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+        <li><a href="https://soundcloud.com/spacemanzack" target="_blank"><i class="fa-brands fa-soundcloud"></i></a></li>
+      </menu>
+    </div>
+  </footer>
+  <script src="/scripts/navbar.js"></script>
+<script src="/scripts/filters.js"></script>
+<script src="https://kit.fontawesome.com/d5f79bd6c1.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

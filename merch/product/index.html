@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merch // Spaceman Zack</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+  <header class="filled-header">
+    <nav id="nav-menu">
+      <menu>
+        <li><a href="/" class="navlink">home</a></li>
+        <li><a href="/merch/" class="navlink">merch</a></li>
+        <li><a href="/music" class="navlink">music</a></li>
+        <li><a href="/videos" class="navlink">videos</a></li>
+        <li><a href="/the-hollow-place" class="navlink">the hollow place</a></li>
+      </menu>
+      <button type="button" id="nav-menu-closer" class="navlink">x</button>
+    </nav>
+    <div id="nav-menu-opener" ><button class="navlink" type="button">menu</button></div>
+    <div id="cart-opener"><button class="navlink" type="button">cart</button></div>
+    <div id="cart-container">
+      <div>
+        <button class="navlink" id="cart-closer" type="button">x</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="content-container header-spacer">
+      <div class="">
+        <div class="merch-image-container">
+          <img src="/images/merch/merch_scumbag.png" alt="">
+        </div>
+        <div class="merch-details-container">
+          <h1>Scumbag T-Shirt</h1>
+          <p>$19.99</p>
+          <form id="productForm">
+            <fieldset class="color-selector">
+              <div class="color-option">
+                <input type="radio" id="color-black" name="color" value="black" checked />
+                <label for="color-black" style="--swatch-color: black"></label>
+              </div>
+              <div class="color-option">
+                <input type="radio" id="color-grey" name="color" value="grey" />
+                <label for="color-grey" style="--swatch-color: grey"></label>
+              </div>
+              <div class="color-option">
+                <input type="radio" id="color-red" name="color" value="red" />
+                <label for="color-red" style="--swatch-color: red"></label>
+              </div>
+              <div class="color-option">
+                <input type="radio" id="color-white" name="color" value="white" />
+                <label for="color-white" style="--swatch-color: white; border: 1px solid #ccc;"></label>
+              </div>
+              <div class="color-option">
+                <input type="radio" id="color-purple" name="color" value="purple" />
+                <label for="color-purple" style="--swatch-color: purple"></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="size-selector">
+              <div class="size-option">
+                <input type="radio" id="size-small" name="size" value="small" />
+                <label for="size-small">sm</label>
+              </div>
+              <div class="size-option">
+                <input type="radio" id="size-medium" name="size" value="medium" />
+                <label for="size-medium">md</label>
+              </div>
+              <div class="size-option">
+                <input type="radio" id="size-large" name="size" value="large" checked/>
+                <label for="size-large">lg</label>
+              </div>
+              <div class="size-option">
+                <input type="radio" id="size-xl" name="size" value="x-large" />
+                <label for="size-xl">xl</label>
+              </div>
+              <div class="size-option">
+                <input type="radio" id="size-2xl" name="size" value="2x-large" />
+                <label for="size-2xl">2xl</label>
+              </div>
+            </fieldset>
+
+            <div class="quantity-selector">
+              <button type="button" id="decrement">−</button>
+              <span id="quantity-display">1</span>
+              <button type="button" id="increment">+</button>
+              <input type="hidden" name="quantity" id="quantity-input" value="1" />
+            </div>
+
+            <button type="submit" class="submit-button">add to cart</button>
+
+
+          </form>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+  </main>
+
+  <footer>
+    <div class="footer-container content-container">
+      <menu class="primary-links">
+        <li><a href="/">home</a></li>
+        <li><a href="/merch">merch</a></li>
+        <li><a href="/music">music</a></li>
+        <li><a href="/videos">videos</a></li>
+      </menu>
+      <menu class="secondary-links">
+        <li><a href="/the-hollow-place">the hollow place</a></li>
+        <li><a href="/contact">business inquiries</a></li>
+        <li><a href="/policies">policies</a></li>
+      </menu>
+      <ul class="site-info">
+        <li>Spaceman Zack © 2025</li>
+        <li>photography by <a href="https://www.instagram.com/taubrxy" target="_blank">T.Aubrey</a></li>
+        <li>site by <a href="#" target="_blank">Daniel</a></li>
+      </ul>
+      <form id="email-list">
+        <label for="emailInput">join the hollow place</label>
+        <div class="form-input-container">
+          <input type="email" id="emailInput" placeholder="email">
+        <button type="button" id="emailJoin">join</button>
+      </div>
+      </form>
+      <menu class="socials-links">
+        <li><a href="https://open.spotify.com/artist/53dPePMlci6GqJXISlntSK" target="_blank"><i class="fa-brands fa-spotify"></i></a></li>
+        <li><a href="https://music.apple.com/us/artist/spaceman-zack/1327103891" target="_blank"><i class="fa-brands fa-itunes-note"></i></a></li>
+        <li><a href="https://music.amazon.com/artists/B07JBC4D4H/spaceman-zack" target="_blank"><i class="fa-brands fa-amazon"></i></a></li>
+        <li><a href="https://www.youtube.com/@TheSpaceManZack" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+        <li><a href="https://www.instagram.com/spacemanzackisdead" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://www.tiktok.com/@spaceman_zack" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+        <li><a href="https://soundcloud.com/spacemanzack" target="_blank"><i class="fa-brands fa-soundcloud"></i></a></li>
+      </menu>
+    </div>
+  </footer>
+  <script src="/scripts/navbar.js"></script>
+<script src="/scripts/product.js"></script>
+<script src="https://kit.fontawesome.com/d5f79bd6c1.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
