@@ -1256,7 +1256,29 @@ footer {
 
   /* product page */
 
-  
+  .product-page {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: stretch;
+    height: 100%;
+  }
+
+  .product-page .merch-image-container {
+    flex: 0 0 50%;
+    display: flex;
+    max-width: 50%;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .product-page .merch-details-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
 
   /* music section */
 
