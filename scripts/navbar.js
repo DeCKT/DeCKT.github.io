@@ -1,3 +1,5 @@
+import { renderCartContents } from "./cart.js";
+
 const navMenu = document.querySelector('#nav-menu');
 const navMenuOpener = document.querySelector('#nav-menu-opener');
 const navMenuCloser = document.querySelector('#nav-menu-closer')
@@ -41,6 +43,7 @@ function openCart() {
 }
 
 function closeCart() {
+  console.log('hello')
   cartContainer.classList.remove('cart-open')
 }
 
@@ -49,3 +52,5 @@ navMenuCloser.addEventListener('click', closeMenu)
 
 cartOpener.addEventListener('click', openCart)
 cartCloser.addEventListener('click', closeCart)
+
+renderCartContents();

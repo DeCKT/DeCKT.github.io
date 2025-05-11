@@ -1,3 +1,5 @@
+import { renderCartContents } from "./cart.js";
+
 const products = {
   "scumbag-t-shirt": {
     name: "Scumbag T-Shirt",
@@ -74,8 +76,6 @@ const products = {
 const params = new URLSearchParams(window.location.search);
 const slug = params.get("name");
 const product = products[slug];
-
-console.log(product)
 
 if (!product) {
   window.location.href = "/merch/";
@@ -186,11 +186,43 @@ if (!product) {
 
   updateDisplay();
 
-  // Temporary form handler
   form.addEventListener("submit", e => {
     e.preventDefault();
+  
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
-    console.log("Submitted data:", data);
+  
+    // Prepare the item to store
+    const cartItem = {
+      name: data.name,
+      image: product.image,
+      price: product.price, // ✅ Add this line
+      quantity: parseInt(data.quantity, 10),
+    };
+  
+    // Conditionally include optional properties
+    if (data.color) cartItem.color = data.color;
+    if (data.size) cartItem.size = data.size;
+  
+    // Load existing cart from localStorage, or start fresh
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
+    // Check for duplicate: match by name + any present options
+    const existingItem = cart.find(item =>
+      item.name === cartItem.name &&
+      item.color === cartItem.color &&
+      item.size === cartItem.size
+    );
+  
+    if (existingItem) {
+      existingItem.quantity += cartItem.quantity;
+    } else {
+      cart.push(cartItem);
+    }
+  
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCartContents();
   });
+  
+  
 }
