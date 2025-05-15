@@ -37,7 +37,7 @@ const products = {
     price: 14.99,
     slug: "mannequin-phone-case",
     options: {
-      colors: ["black", "white", "clear"]
+      colors: ["black", "white", "red"]
     }
   },
   "smz-logo-hat": {
